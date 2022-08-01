@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Lora:ital,wght@1,600&family=Poppins:wght@500&family=Smooch&display=swap");
+
+    body {
+      margin: 0%;
+      padding: 0%;
+      height: 100vh;
+    }
+    .appbar_main {
+      height: 60px;
+      background-color: #18bbcc;
+      align-items: center;
+      display: flex;
+    }
+    .appbar_title {
+      color: white;
+      font-size: 40px;
+      margin-left: 100px;
+      font-family: "Fascinate", cursive;
+      font-family: "Lora", serif;
+      font-family: "Poppins", sans-serif;
+      font-family: "Smooch", cursive;
+      /* text-shadow: 2px 2px 5px rgb(13, 13, 255); */
+    }
+    .appbar_menu {
+      color: white;
+      margin-right: 100px;
+    }
+    .appbar_menu_a {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+    .appbar_menu_a:hover {
+      background-color: rgba(255, 255, 255, 0.249);
+      color: black;
+      border-radius: 12px;
+      /* border-bottom: 5px solid blue; */
+    }
+    .container_main{
+        position: relative;
+    }
+    .container_img{
+        width: 100%;height: 600px;
+    }
+    .container_img_con{
+        position: absolute;top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+    .container_img_con_title{
+        font-size: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .container_img_con_search{
+        width: 300px;height: 30px;outline:none ;padding-left: 10px;border: none;border-radius: 8px;
+        color: rgb(74, 73, 73);
+        font-size: 15px;
+    }
+    .card_main{
+        height:500px;width: 100%;display: flex; align-items: center; justify-content: center;
+        
+    }
+    .card_main_con{
+         height: 400px; width: calc(100vw - 300px);display: flex;flex-direction: row;
+    }
+    .card_main_con_div{
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 20px;
+    }
+    .card_main_con_div_i{
+        font-size: 50px;
+        color: #18bbcc;
+    }
+    .card_main_con_div_h3{
+        font-size: 30px;
+        color: black;
+    }
+    .card_main_con_div_p{
+        color: gray;
+        text-align: center;
+    }
+    .about_main{
+        height:500px;width: 100%;display: flex; align-items: center; justify-content: center;background-color: #f7f7f7;
+    }
+    .about_main_con{
+        height: 400px; width: calc(100vw - 300px);display: flex;flex-direction: row;
+    }
+    .about_main_con_div{
+        flex-grow: 1;width: 50%;
+    }
+    .about_main_con_div_text{
+        align-items: center;display: flex;justify-content: center;height: 100%;flex-direction: column;
+    }
+    .follow_main{
+        height: 300px;width: 100%;display: flex;justify-content: center;align-items: center;
+    }
+    .follow_main_con{
+        height: 200px;width: calc(100% - 200px);display: flex;
+    }
+    .follow_main_con_div{
+        flex-grow:1;display: flex;align-items: center;justify-content: center;
+            flex-direction: column;
+    }
+    .follow_main_con_div_h1{
+        font-size: 50px;color: #18bbcc;margin: 0%;
+    }
+    .follow_main_con_div_h3{
+        font-size: 25px;margin: 0%;
+    }
+    .contact_main{
+        height: 500px;display: flex;background-color: #f7f7f7
+    }
+    .contact_main_div_1{
+        flex-grow: 1;width: 50%;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;
+    }
+    .contact_main_div_1_img{
+        width: 250px;
+    }
+    .contact_main_div_1_p{
+        padding:  10px 80px;font-size: 25px;
+    }
+    .contact_main_div_2_h1{
+        margin-bottom: 60px;
+        font-size: 40px
+    }
+    .contact_main_div_2_input{
+        height: 40px;width: calc(100% - 100px);margin-bottom: 20px;border-radius: 10px;padding-left: 15px;outline: none;border: 1px solid #18bbcc;color: gray;
+    }
+    .contact_main_div_2_button{
+        padding: 10px 50px;font-size: 15px;border-radius: 10px;outline: none;border: 1px solid #18bbcc;color: #18bbcc;background-color:white ;
+    }
+    .contact_main_div_2_button:hover{
+        background-color: #18bbcc;
+        color: white;
+        transition: all 0.5s;
+    }
+    @media only screen and (max-width: 1200px){
+        .card_main_con{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 910px){
+        .card_main{
+            height: auto;
+        }
+        .card_main_con{
+            flex-direction: column;
+            height: auto;
+        }
+        .about_main{
+            height: auto;
+           
+           
+        }
+        .about_main_con{
+            flex-direction: column;
+            width: calc(100vw - 50px);
+            height: auto;
+        }
+        .about_main_con_div{
+            width: 100%;
+          
+        }
+
+
+    }
+    @media only screen and (max-width: 800px){
+        .appbar_title{
+            margin: 0%;
+        }
+        .appbar_menu{
+            display: none;
+        }
+        .follow_main{
+            height: auto;
+        }
+        .follow_main_con{
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+        }
+        .follow_main_con_div{
+            margin-bottom: 20px;
+            height: 150px;
+        }
+        .contact_main{
+            height: auto;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+           
+        }
+        .contact_main{
+            width: 100%;
+        }
+        .contact_main_div_1{
+            width: auto;
+        }
+
+
+    }
+    @media only screen and (max-width: 350px){
+        .container_img{
+            display: none;
+        
+        }
+        .container_main{
+            height: 500px;
+        }
+        .container_img_con{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 500px;
+        }
+        .container_img_con_search{
+            background-color: black;
+            color: white;
+            width: 200px;
+        }
+        .appbar_main{
+            box-shadow: 1px 2px 12px rgba(0, 0, 255, 0.573);
+        }
+        .card_main_con_div_h3{
+            font-size: 20px;
+            text-align: center;
+        }
+
+    }
+    @media only screen and (max-width: 300px){
+        .contact_main_div_1_img {
+            width: 150px;
+        }
+    }
+  </style>
+  <body>
+    <!-- appbar -->
+    <div class="appbar_main">
+      <div class="appbar_title">Glossy</div>
+      <div style="flex-grow: 1"></div>
+      <div class="appbar_menu">
+        <a class="appbar_menu_a">Home</a>
+        <a class="appbar_menu_a">Service</a>
+        <a class="appbar_menu_a">About us</a>
+        <a class="appbar_menu_a">Contact us</a>
+      </div>
+      
+    </div>
+    <!-- container 1 -->
+    <div class="container_main" >
+      <img src="2.jpg" class="container_img" >
+    <div class="container_img_con" >
+    <h2 class="container_img_con_title" >Sell Online With Glossy</h2>
+    <input type="text" placeholder="Search Everthing..." class="container_img_con_search" >    
+    </div>
+    </img>
+    </div>
+    <!-- card -->
+    <div class="card_main" >
+        <div class="card_main_con" >
+            <div class="card_main_con_div">
+                <i class="fa fa-truck  card_main_con_div_i" aria-hidden="true"></i>
+                <h3  class="card_main_con_div_h3">Free Shiping</h3>
+                <p class="card_main_con_div_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam voluptatum est sint beatae! Quo deserunt adipisci aut et dolor illo id iure omnis. Quis error nesciunt possimus ab dolorum.</p>
+            </div>
+            <div class="card_main_con_div">
+                <i class="fa fa-certificate card_main_con_div_i" aria-hidden="true"></i>
+                <h3 class="card_main_con_div_h3">Certificate Organic</h3>
+                <p class="card_main_con_div_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam voluptatum est sint beatae! Quo deserunt adipisci aut et dolor illo id iure omnis. Quis error nesciunt possimus ab dolorum.</p>
+            </div>
+            <div class="card_main_con_div">
+                <i class="fa fa-undo card_main_con_div_i" aria-hidden="true"></i>
+                <h3  class="card_main_con_div_h3">Easy Return</h3>
+                <p  class="card_main_con_div_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam voluptatum est sint beatae! Quo deserunt adipisci aut et dolor illo id iure omnis. Quis error nesciunt possimus ab dolorum.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- about -->
+    <div class="about_main">
+        <div class="about_main_con" >
+            <div class="about_main_con_div" >
+                <img src="./sale1.png" width="100%" height="100%"></img>
+            </div>
+            <div class="about_main_con_div">
+                <div class="about_main_con_div_text" >
+                    <p style="padding-left: 20px;"><i class="fa fa-arrow-right" aria-hidden="true" ></i>  In order to be a good shopper, there are certain skills that you need to possess. First of all, you need to know what you want. It is important to have a clear idea of what you are looking for before you start shopping. This will save you time and money, as you will not waste your time browsing through items that you don’t need.</p>
+                    <p style="padding-left: 20px;"><i class="fa fa-arrow-right" aria-hidden="true"></i>  You also need to be patient. Shopping can be a long process, and it is important to take your time when making decisions. If you are in a hurry, you are likely to make bad choices and end up spending more money than you intended.</p>
+                    <p style="padding-left: 20px;"><i class="fa fa-arrow-right" aria-hidden="true"></i>  Finally, you need to be savvy with your money. There are many ways to save money when shopping, and it is important to take advantage of these deals. There are also many traps that shoppers can fall into, such as impulse buying and overspending. If you are aware of these dangers, you can avoid them and stay on budget.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- follow -->
+    <div class="follow_main">
+        <div class="follow_main_con" >
+            <div class="follow_main_con_div" >
+                <h1 class="follow_main_con_div_h1" >40K</h1>
+                <h3 class="follow_main_con_div_h3">Subscriber</h3>
+            </div>
+            <div class="follow_main_con_div">
+                <h1 class="follow_main_con_div_h1">20K</h1>
+                <h3 class="follow_main_con_div_h3">Download</h3>
+            </div>
+            <div class="follow_main_con_div">
+                <h1 class="follow_main_con_div_h1">80K</h1>
+                <h3 class="follow_main_con_div_h3">Likes</h3>
+            </div>
+            <div class="follow_main_con_div">
+                <h1 class="follow_main_con_div_h1">50K</h1>
+                <h3 class="follow_main_con_div_h3">Votes</h3>
+            </div>
+        </div>
+    </div>
+    <!-- contact us page -->
+    <div class="contact_main" >
+        <div class="contact_main_div_1" >
+            <img src="email.png" class="contact_main_div_1_img" ></img>
+            <p class="contact_main_div_1_p" >If you have questions of just want to get in touch, use the form below. We look forward to hearing from you !</p>
+        </div>
+        <div class="contact_main_div_1" >
+            <h1 class="contact_main_div_2_h1">Contact US</h1>
+            <input type="text" placeholder="First Name" class="contact_main_div_2_input"  >
+            <input type="text" placeholder="Last Name" class="contact_main_div_2_input" >
+            <input type="email" placeholder="Email" class="contact_main_div_2_input" >
+            <input type="text" placeholder="Message" class="contact_main_div_2_input" >
+            <button class="contact_main_div_2_button" >SEND</button>
+        </div>
+        
+    </div>
+</body> 
+</html>
